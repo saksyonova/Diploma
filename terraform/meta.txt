@@ -1,0 +1,8 @@
+#cloud-config
+users:
+  - name: sania
+    groups: sudo
+    shell: /bin/bash
+    sudo: ['ALL=(ALL) NOPASSWD:ALL']
+    ssh_authorized_keys:
+      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDWnbTJtjXybj3R6+yVARUCBuYFgEMcR7Az7gRUWU+eAuMT+m1PcU/d1SSGz3Nze72Z5elv/Q9DmlBmz/LLjAHaKbT59TTC7W4JAPSCRNZiCmPmmH7riBIuu9mbX/seM/qcfcwLhiqhnqyw0UaQq5VSKTXxXtbLwjEiTukpNfu9eQhvQNKCVxomfXilhVNHttaUfOPnP3NqyfDiUwEjzXVlOXTifYwt9vOAgYqTeLagr3jg+JmBQXX+3RJbu8pl9OsKfx2VvXYuJDou4XWBjJmMOK4OoFFXB9DMbwHhXzveRslibayrZ2uWA52tcHxxpvTQo1RLKT0zqQNenDUX+/OaX1sYyjCRbiEDgapnKuIdNMrZzfcfafzU4jCl2ld5hFZvO/gFGZumN/zvAVpUuaFeF6sxkPhxsaRUTUulSa1ZskmexSWNMHmgqHXRANF4nXf8K7MZhQO0EJF63X6gSwSgbep6EyCXlJoZjSoitQV9aMJsJS21RkONcm5n/aZUhmk= sania@sania-vb

@@ -1,0 +1,36 @@
+[front]
+devopsy.ru letsencrypt_email=aksyonova.sa@gmail.com domain_name=devopsy.ru
+
+[MySQL]
+db01.devopsy.ru mysql_server_id=1 mysql_replication_role=master
+db02.devopsy.ru mysql_server_id=2 mysql_replication_role=slave
+
+[app]
+app.devopsy.ru
+
+[gitlab]
+gitlab.devopsy.ru
+
+[runner]
+runner.devopsy.ru
+
+[monitoring]
+monitoring.devopsy.ru
+
+[proxy]
+devopsy.ru
+
+[MySQL:vars]
+ansible_ssh_common_args='-o ProxyCommand="ssh -W %h:%p -q sania@devopsy.ru"'
+
+[app:vars]
+ansible_ssh_common_args='-o ProxyCommand="ssh -W %h:%p -q sania@devopsy.ru"'
+
+[monitoring:vars]
+ansible_ssh_common_args='-o ProxyCommand="ssh -W %h:%p -q sania@devopsy.ru"'
+
+[gitlab:vars]
+ansible_ssh_common_args='-o ProxyCommand="ssh -W %h:%p -q sania@devopsy.ru"'
+
+[runner:vars]
+ansible_ssh_common_args='-o ProxyCommand="ssh -W %h:%p -q sania@devopsy.ru"'
