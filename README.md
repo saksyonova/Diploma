@@ -13,14 +13,15 @@
   
 ## 2. создание инфраструктуры  
   
-инфраструктура дипломного проекта развернётся через `terraform apply` из каталога Terraform нашего репозитория:  
+инфраструктура дипломного проекта разворачивается через `terraform apply` из каталога Terraform нашего репозитория:  
   
-- `app.tf`, `devopsy.tf`, `gitlab.tf`, `monitoring.tf`. `MySQL.tf`, `runner.tf` - содержат манифесты для создания ВМ в YC;  
+- `app.tf`, `devopsy.tf`, `gitlab.tf`, `monitoring.tf`, `MySQL.tf`, `runner.tf` - содержат манифесты для создания ВМ в YC;  
 - `meta.txt` - содержит основного пользователя и его открытый ключ, который будет создаваться в ВМ;  
 - `network.tf` - содержит настройки сетей;  
 - `providers.tf` - содержит настройки для подключения к провайдеру;  
 - `variables.tf` - содержит переменную с зарезервированным статичным адресом, который используется в том числе при настройке DNS-записей.  
 >![terraform apply 1](https://raw.githubusercontent.com/saksyonova/Diploma/main/images/3_terraform%20apply%201.png) 
+  
 >![terraform apply 2](https://raw.githubusercontent.com/saksyonova/Diploma/main/images/3_terraform%20apply%202.png)
   
   
