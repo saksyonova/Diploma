@@ -1,0 +1,16 @@
+- hosts: MySQL
+  gather_facts: true
+  become:
+    true
+  become_method:
+    sudo
+  become_user:
+    root
+  remote_user:
+    sania
+  roles:
+   - Install_MySQL
+  
+  environment:
+     http_proxy: http://devopsy.ru:8118
+     https_proxy: http://devopsy.ru:8118

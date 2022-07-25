@@ -1,0 +1,25 @@
+- hosts: app
+  gather_facts: true
+  become:
+    true
+  become_method:
+    sudo
+  become_user:
+    root
+  remote_user:
+    sania
+  vars:
+    - domain: "devopsy.ru"
+    - download_url: "http://wordpress.org/latest.tar.gz"
+    - wpdirectory: "/var/www"
+ 
+  roles:
+   - nginx
+   - memcached
+   - php5
+   - wordpress
+
+  environment:
+     http_proxy: http://devopsy.ru:8118
+     https_proxy: http://devopsy.ru:8118
+
